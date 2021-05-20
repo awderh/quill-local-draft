@@ -1,0 +1,24 @@
+{
+  "name": "quill-local-drafts",
+  "version": "1.0.0",
+  "description": "Local drafts for Quill",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AWDerh/quill-local-drafts.git"
+  },
+  "keywords": [
+    "quill",
+    "plugin",
+    "drafts"
+  ],
+  "author": "AWDerh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AWDerh/quill-local-drafts/issues"
+  },
+  "homepage": "https://github.com/AWDerh/quill-local-drafts#readme"
+}
