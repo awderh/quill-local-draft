@@ -1,0 +1,10 @@
+@import '~quill/dist/quill.snow.css';
+
+body {
+    width: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
