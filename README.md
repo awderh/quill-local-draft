@@ -14,6 +14,7 @@ Quill.register({
 })
 
 myQuill = new Quill( ... , {
+    theme : 'snow',
     modules: {
         localDraft: {
             id: 'something_unique',
@@ -21,8 +22,13 @@ myQuill = new Quill( ... , {
     }
 });
 
-draftModule = myQuill.getModule('localDraft').init(); // see notes on why this is needed
+myQuill.getModule('localDraft').init(); // see notes on why this is needed
 ```
+
+See the `demo/` folder in `src/` for more. You can download the source code and run `npm install` in the root directory, followed by `npm run serve` for a local demo.
+
+# Options
+See the class `LocalDraftOptions` in `src/QuillLocalDraft.ts`
 
 # Notes
 Drafts are saved via local storage as stringified Delta. The `.init()` method inside the module is invoked because of how Quill (at the time of writing) doesn't fire a consistent event on initialization.
