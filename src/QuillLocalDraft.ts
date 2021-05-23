@@ -48,6 +48,7 @@ export class QuillLocalDraft {
             return;
 
         this.initialized = true;
+        this.unbindListener();
         this.loadDraft();
         this.bindListener();
     }
@@ -133,8 +134,10 @@ export class QuillLocalDraft {
     }
 
     public saveDraft(): void {
+        console.time("saveDraft");
         const contents = this.getContents();
         this.setDraft(contents);
+        console.timeEnd("saveDraft");
     }
 
     private _loadDraft(): void {

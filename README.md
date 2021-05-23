@@ -4,8 +4,8 @@ This is a simple local drafts plugin for the Quill Rich Text editor. See the [de
 
 # Highlights
 
-- Automatic saving: throttled to 1s (default) between keystrokes
-- Automatic loading - if a conflict occurs between current editor contents (e.g., those via an HTML initial load by Quill), the user is warned. You may choose to extend the UI for this.
+-   Automatic saving: throttled to 1s (default) between keystrokes
+-   Automatic loading - if a conflict occurs between current editor contents (e.g., those via an HTML initial load by Quill), the user is warned. You may choose to extend the UI for this.
 
 # Getting Started
 
@@ -39,12 +39,12 @@ See the `demo/` folder in `src/` for more. You can download the source code and 
 
 ```ts
 export interface LocalDraftOptions {
-  id: string;
-  prefix?: string;
-  saveDelay?: number;
-  displaySave?: boolean;
-  saveFormat?: string;
-  bindInitial?: boolean;
+    id: string;
+    prefix?: string;
+    saveDelay?: number;
+    displaySave?: boolean;
+    saveFormat?: string;
+    bindInitial?: boolean;
 }
 ```
 
@@ -52,20 +52,22 @@ Defaults are:
 
 ```ts
 export const DEFAULT_OPTIONS: LocalDraftOptions = {
-  id: "",
-  prefix: "quill_local_draft",
-  saveDelay: 1000,
-  displaySave: true,
-  bindInitial: true
+    id: "",
+    prefix: "quill_local_draft",
+    saveDelay: 1000,
+    displaySave: true,
+    bindInitial: true,
 };
 ```
 
-- `id`: A unique identifier for setting/getting editor contents.
-- `prefix`: The final ID used in the storage API is `${prefix}_${id}`
-- `saveDelay`: Time (ms) between saves. Saves are triggered per keystroke and [throttled](https://www.npmjs.com/package/throttle-debounce).
-- `displaySave`: (Not impl.) Placeholder for future UI
-- `bindInitial`: (Potential change in future rev) Allows you to disable the first bind.
+-   `id`: A unique identifier for setting/getting editor contents.
+-   `prefix`: The final ID used in the storage API is `${prefix}_${id}`
+-   `saveDelay`: Time (ms) between saves. Saves are triggered per keystroke and [throttled](https://www.npmjs.com/package/throttle-debounce).
+-   `displaySave`: (Not impl.) Placeholder for future UI
+-   `bindInitial`: (Potential change in future rev) Allows you to disable the first bind.
 
 # Notes
 
 Drafts are saved via local storage as stringified Delta. The `.init()` method inside the module is invoked because of how Quill (at the time of writing) doesn't fire a consistent event on initialization.
+
+Per my testing, ~37kB worth of text (like a blog post) takes `~1ms` to save into localStorage.

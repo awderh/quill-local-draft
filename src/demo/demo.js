@@ -1,22 +1,22 @@
-import './demo.css';
-import Quill from 'quill';
-import { QuillLocalDraft, LocalDraftOptions } from '../QuillLocalDraft'
+import "./demo.css";
+import Quill from "quill";
+import { QuillLocalDraft, LocalDraftOptions } from "../QuillLocalDraft";
 
 Quill.register({
-    'modules/localDraft': QuillLocalDraft
-})
+    "modules/localDraft": QuillLocalDraft,
+});
 
 const localDraftOptions = {
-    id: 'demo',
-}
+    id: "demo",
+};
 
-const divElem = document.getElementById('quill');
+const divElem = document.getElementById("quill");
 const quill = new Quill(divElem, {
-    theme: 'snow',
+    theme: "snow",
     modules: {
-        localDraft: localDraftOptions
-    }
+        localDraft: localDraftOptions,
+    },
 });
-quill.getModule('localDraft').init(); // Necessary, unfortunately.
+quill.getModule("localDraft").init(); // Necessary, unfortunately.
 
 window.quillDemo = quill;
