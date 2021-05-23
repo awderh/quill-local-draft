@@ -22,6 +22,7 @@ const config = {
         open: true,
         host: 'localhost',
         contentBase: './dist',
+        openPage: ['demo/demo.html'],
         writeToDisk: true,
     },    
     plugins: [

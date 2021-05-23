@@ -1,8 +1,9 @@
 {
-  "name": "my-webpack-project",
-  "version": "1.0.0",
-  "description": "My webpack project",
-  "main": "dist/quillLocalDraft.js",
+  "name": "quill-local-draft",
+  "version": "0.0.1",
+  "description": "Local Drafts for Quill",
+  "main": "dist/quillLocalDrafts.js",
+  "publish": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production --node-env=production",
@@ -18,7 +19,8 @@
   "keywords": [
     "quill",
     "plugin",
-    "drafts"
+    "drafts",
+    "local"
   ],
   "author": "AWDerh",
   "license": "MIT",
