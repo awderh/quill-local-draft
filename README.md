@@ -1,6 +1,6 @@
 # Quill Local Drafts
 
-This is a simple local drafts plugin for the Quill Rich Text editor. See the [demo](https://jsfiddle.net/awderh/pogL3ca2/12/) here.
+This is a simple local drafts plugin for the Quill Rich Text editor. See the [demo](https://jsfiddle.net/awderh/pogL3ca2/12/) here. It operates via the [localStorage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
 # Getting Started
 
@@ -32,7 +32,32 @@ See the `demo/` folder in `src/` for more. You can download the source code and 
 
 # Options
 
-See the class `LocalDraftOptions` in `src/QuillLocalDraft.ts`
+```ts
+export interface LocalDraftOptions {
+  id: string;
+  prefix?: string;
+  saveDelay?: number;
+  displaySave?: boolean;
+  saveFormat?: string;
+  bindInitial?: boolean;
+}
+```
+
+Defaults are:
+
+```ts
+export const DEFAULT_OPTIONS: LocalDraftOptions = {
+  id: "",
+  prefix: "quill_local_draft",
+  saveDelay: 1000,
+  displaySave: true,
+  bindInitial: true
+};
+```
+
+- `id`: A unique identifier for setting/getting editor contents.
+- `prefix`: The final ID used in the storage API is `${prefix}_${id}`
+- `saveDelay`: Time (ms) between saves. Saves are triggered per keystroke and [throttled](https://www.npmjs.com/package/throttle-debounce).
 
 # Notes
 
