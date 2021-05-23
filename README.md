@@ -2,6 +2,11 @@
 
 This is a simple local drafts plugin for the Quill Rich Text editor. See the [demo](https://jsfiddle.net/awderh/pogL3ca2/12/) here. This module utilizes the [localStorage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), however, you could easily extend the class to use sessionStorage or something else.
 
+# Highlights
+
+- Automatic saving: throttled to 1s (default) between keystrokes
+- Automatic loading - if a conflict occurs, the user is warned. You may choose to extend the UI for this.
+
 # Getting Started
 
 You can download the distribution as-is (see `dist/`) and copy it over, or you can use NPM.
