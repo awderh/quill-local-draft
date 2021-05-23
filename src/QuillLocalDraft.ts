@@ -134,10 +134,8 @@ export class QuillLocalDraft {
     }
 
     public saveDraft(): void {
-        console.time("saveDraft");
         const contents = this.getContents();
         this.setDraft(contents);
-        console.timeEnd("saveDraft");
     }
 
     private _loadDraft(): void {

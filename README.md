@@ -68,6 +68,10 @@ export const DEFAULT_OPTIONS: LocalDraftOptions = {
 
 # Notes
 
-Drafts are saved via local storage as stringified Delta. The `.init()` method inside the module is invoked because of how Quill (at the time of writing) doesn't fire a consistent event on initialization.
+Drafts are saved via local storage as stringified Delta.
+
+The `.init()` method inside the module is called because of how Quill 2.X-dev (at the time of writing) [doesn't fire a consistent event on initialization](https://github.com/quilljs/quill/issues/3374). For Quill v1, this shouldn't be required.
+
+_For Quill v2, I recommend you initialize manually, since there's no guarantee as to what your other plugins will do. That is, set `bindInitial = false` in options and call `...getModule('localDraft').init()` per the example_
 
 Per my testing, ~37kB worth of text (like a blog post) takes `~1ms` to save into localStorage.
