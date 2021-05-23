@@ -1,6 +1,6 @@
 # Quill Local Drafts
 
-This is a simple local drafts plugin for the Quill Rich Text editor.
+This is a simple local drafts plugin for the Quill Rich Text editor. See the [demo](https://jsfiddle.net/awderh/pogL3ca2/12/) here.
 
 # Getting Started
 
