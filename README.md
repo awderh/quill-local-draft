@@ -5,7 +5,7 @@ This is a simple local drafts plugin for the Quill Rich Text editor. See the [de
 # Highlights
 
 - Automatic saving: throttled to 1s (default) between keystrokes
-- Automatic loading - if a conflict occurs, the user is warned. You may choose to extend the UI for this.
+- Automatic loading - if a conflict occurs between current editor contents (e.g., those via an HTML initial load by Quill), the user is warned. You may choose to extend the UI for this.
 
 # Getting Started
 
