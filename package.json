@@ -1,8 +1,8 @@
 {
   "name": "quill-local-draft",
   "version": "0.0.1",
-  "description": "Local Drafts for Quill",
-  "main": "dist/quillLocalDrafts.js",
+  "description": "Local Draft for Quill",
+  "main": "dist/quillLocalDraft.js",
   "publish": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,20 +14,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AWDerh/quill-local-drafts.git"
+    "url": "git+https://github.com/AWDerh/quill-local-draft.git"
   },
   "keywords": [
     "quill",
     "plugin",
-    "drafts",
+    "draft",
     "local"
   ],
   "author": "AWDerh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AWDerh/quill-local-drafts/issues"
+    "url": "https://github.com/AWDerh/quill-local-draft/issues"
   },
-  "homepage": "https://github.com/AWDerh/quill-local-drafts#readme",
+  "homepage": "https://github.com/AWDerh/quill-local-draft#readme",
   "dependencies": {
     "@types/throttle-debounce": "^2.1.0",
     "quill": "^1.3.7",
